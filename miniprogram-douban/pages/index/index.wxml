@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="containers">
+  <view class="userinfo">
+    <view class="header_viode">
+      <text>已有734506人生成成就海报</text>
+      <!-- <view class="kanguo">
+      <image src="../..images/user_photo.jpg"/> -->
+      <!-- <text> 看过26部</text> -->
+      <!-- </view> -->
+      <video loop="loop" autoplay="autoplay" preload="metadata" src="https://sv1.doubanio.com/201907010818/b6b7ef7a5f0fbc485e757116f9756fb1/2017/mp4ieannual2018.mp4" style="color: rgb(133, 164, 173)">
+      </video>
+    </view>
+    <view class="viode_zhezhao">
+      <image src="../../images/p3472.jpg" />
+    </view>
+    <!-- 携程2018豆瓣 -->
+    <image class="xiehengbangdan" src="../../images/p3738.jpg" />
+    <!-- 我看过0部电影 -->
+    <view class="Seen">
+      <view class="seen_L">
+        <text>我看过{{msg}}0部</text>
+        <text>2018年度电影共135部</text>
+      </view>
+      <view class="seen_R">
+        <button>生成成就海报</button>
+      </view>
+      <view class="seen_F">
+        <image src="../../images/Screenshot_2019_0630_222448.png" />
+        <view class="seen_f_c">
+          <text>快速补标</text>
+          <text>找回你的观影记忆</text>
+        </view>
+        <image src="../../images/Screenshot_2019_0630_222600.png" />
+      </view>
+    </view>
+  </view>
+  <!-- 2018分类榜单 -->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <view class="classification">
+      <view class="classification_column" wx:for="{{classification}}" bindtap="highestScore">
+        <image src="../../images/bangdanbj.png" />
+        <view class="title sets{{index+1}}">
+          <text>{{item.title1}}</text>
+          <text>{{item.title2}}</text>
+          <view />
+        </view>
+        <text class="title3">看过0部/共{{index+10}}部</text>
+      </view>
+    </view>
+  </view>
+
+</view>

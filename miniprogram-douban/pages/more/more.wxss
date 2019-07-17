@@ -1,0 +1,39 @@
+.upload_Item {
+  padding-top: 30rpx;
+  float: left;
+  width: 30%;
+  height: 380rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-left: 3%
+}
+.upload_Item_img {
+  float: left;
+  width: 200rpx;
+  height: 300rpx;
+  margin: 0 0 0 8rpx;
+  border-radius: 10rpx;
+}
+.upload_Item text {
+  display: inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width: 160rpx;
+  font-size: 26rpx; 
+  margin-top: 26rpx;
+  margin: 0 0 0 10rpx;
+  text-align: left;
+}
+.upload_Item i-rate{
+  width: 70%;
+  float: left;
+  margin-left: 5%;
+}
+.upload_Item i-cell text{
+  margin-top: 10rpx;
+  width: 20%;
+  float: right;
+  font-size: 25rpx;
+  color: #969696;
+}

@@ -1,0 +1,34 @@
+<!-- 设置页面 -->
+<view class="setting">
+  <i-row>
+    <!-- 授权设置 -->
+    <i-col span="2">
+      <van-icon name="setting" size="18px" />
+    </i-col>
+    <i-col span="22" bindtap="AuthorizationSettings">
+      <text>授权设置</text>
+    </i-col>
+  </i-row>
+</view>
+<view class="setting">
+  <i-row>
+    <!-- 收货地址 -->
+    <i-col span="2">
+      <van-icon name="logistics" size="18px" />
+    </i-col>
+    <i-col span="22" bindtap="ReceivingAddress">
+      <text>收货地址</text>
+    </i-col>
+  </i-row>
+</view>
+<view class="setting" bindtap='clearStorage'>
+  <i-row>
+    <!-- 清楚缓存 -->
+    <i-col span="2">
+      <van-icon name="brush-o" size="18px" />
+    </i-col>
+    <i-col span="22">
+      <text>清楚缓存</text>
+    </i-col>
+  </i-row>
+</view>

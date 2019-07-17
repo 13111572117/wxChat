@@ -1,0 +1,5 @@
+<!-- 想看 -->
+<view class="Want_to_see">
+  <textarea placeholder="记录一下想看的理由"></textarea>
+  <button>确定</button>
+</view>

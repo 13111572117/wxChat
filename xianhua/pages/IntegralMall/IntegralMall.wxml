@@ -1,0 +1,19 @@
+<view class="wallet">
+  <view class="wallet_balance">
+    <i-row>
+      <i-col span="18">
+        <text class="balance">0.00 </text><text> 积分</text>
+        <text>积分明细，如何获取更多积分</text>
+      </i-col>
+      <i-col span="6">
+        <text>兑换记录</text>
+      </i-col>
+    </i-row>
+  </view>
+  <view class="wallet_history">
+    <text>积分商城</text>
+  </view>
+  <view class="CashWithdrawal">
+    <text>没有更多了</text>
+  </view>
+</view>

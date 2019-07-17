@@ -1,0 +1,39 @@
+<!-- ShoppingCart购物车 -->
+<view class="ShoppingCart">
+  <!-- 购物车为空 -->
+  <view class="empty" wx:if="{{oncarinfo == ''}}">
+    <image src="../../images/kong.png" />
+    <text>购物车里还没有商品去转转吧...</text>
+  </view>
+  <!-- 已加购商品列表 -->
+  <view class="AdditionalPurchases wrapper" wx:for="{{oncarinfo}}" wx:key="{{index}}">
+    <van-checkbox-group value="{{ result }}" catch:change="onChange">
+      <van-checkbox checked-color="#07c160" name="{{ index }}">
+        <view class="Additional_list">
+          <view class="AdditionalCard_image">
+            <image src="{{item.img}}" />
+          </view>
+          <view class="AdditionalCard_information">
+            <text>{{item.name}}</text>
+            <text>￥{{item.price}}</text>
+          </view>
+        </view>
+        <!-- 删除 -->
+        <view class="Additional_del" data-index="{{index}}" catchtap="delItem">
+          <i-icon type="trash" size="25" />
+        </view>
+      </van-checkbox>
+    </van-checkbox-group>
+    <van-stepper class="wrapper-price" data-index="{{index}}" value="{{ item.count }}" max="100" bind:plus="plus" bind:minus="minus" bind:change="onChange2" />
+  </view>
+  <!-- 提交订单 -->
+  <view class="tijiaodingdan">
+    <van-submit-bar price="{{ prices }}" bind button-text="提交订单" catchtap="onClickButtons">
+      <!-- <van-tag type="primary"> -->
+      <!-- </van-tag> -->
+    </van-submit-bar>
+  </view>
+    <view class='quanxuan'>
+      <van-checkbox value="{{ checked }}" checked-color="#07c160" bind:change="onChange1">全选</van-checkbox>
+    </view>
+</view>

@@ -1,0 +1,12 @@
+<view class="upload_Item" wx:for="{{subjects}}">
+  <!-- navigator：页面跳转链接 -->
+  <view bindtap="details" data-newsid="{{item.id}}">
+    <image class="upload_Item_img" src="{{item.image}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+  <i-cell>
+    <i-rate bind:change="" value="{{item.rating.average/2}}" size="12">
+    </i-rate>
+    <text>{{item.rating.average}}</text>
+  </i-cell>
+</view>

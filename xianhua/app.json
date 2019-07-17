@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ConfirmationOfOrders/ConfirmationOfOrders",
+    "pages/ConfirmationOfOrders2/ConfirmationOfOrders2",
+    "pages/ListofGoods/ListofGoods",
+    "pages/logs/logs",
+    "pages/CommodityDetails/CommodityDetails",
+    "pages/ShoppingCart/ShoppingCart",
+    "pages/my/my",
+    "pages/wallet/wallet",
+    "pages/IntegralMall/IntegralMall",
+    "pages/cardbag/cardbag",
+    "pages/Order/Order",
+    "pages/collection/collection",
+    "pages/setting/setting",
+    "pages/addAddress/addAddress"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f3514e",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff4f4c",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "花店",
+        "selectedIconPath": "./images/huadian2.png",
+        "iconPath": "./images/huadian.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "分类",
+        "selectedIconPath": "./images/fenlei2.png",
+        "iconPath": "./images/fenlei.png"
+      },
+      {
+        "pagePath": "pages/ShoppingCart/ShoppingCart",
+        "text": "购物车",
+        "selectedIconPath": "./images/gouwuche2.png",
+        "iconPath": "./images/gouwuche.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "selectedIconPath": "./images/wode.png",
+        "iconPath": "./images/wode1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "wux-icon": "./utils/wux_icon/index",
+    "i-icon": "./utils/dist/icon/index",
+    "i-row": "./utils/dist/row/index",
+    "i-col": "./utils/dist/col/index",
+    "i-sticky": "./utils/dist/sticky/index",
+    "i-sticky-item": "./utils/dist/sticky-item/index",
+    "i-toast": "./utils/dist/toast/index",
+    "i-button": "./utils/dist/button/index",
+    "i-input-number": "./utils/dist/input-number/index",
+    "i-checkbox-group": "./utils/dist/checkbox-group/index",
+    "i-checkbox": "./utils/dist/checkbox/index",
+    "i-swipeout": "./utils/dist/swipeout/index",
+    "van-icon": "./utils/lib/icon/index",
+    "van-popup": "./utils/lib/popup/index",
+    "van-stepper": "./utils/lib/stepper/index",
+    "van-tab": "./utils/lib/tab/index",
+    "van-tabs": "./utils/lib/tabs/index",
+    "van-checkbox": "./utils/lib/checkbox/index",
+    "van-checkbox-group": "./utils/lib/checkbox-group/index",
+    "van-swipe-cell": "./utils/lib/swipe-cell/index",
+    "van-submit-bar": "./utils/lib/submit-bar/index",
+    "van-action-sheet": "./utils/lib/action-sheet/index",
+    "van-toast": "./utils/lib/toast/index"
+  }
+}

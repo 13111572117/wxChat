@@ -1,0 +1,81 @@
+/* pages/setting/setting.wxss */
+
+page {
+  height: 100%;
+}
+
+.wallet {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.wallet_balance {
+  width: 92%;
+  color: #333;
+  padding: 20rpx 4% 0 4%;
+  background-color: #f3514e;
+}
+
+.wallet_balance i-row:nth-of-type(1) i-col:nth-of-type(1) text {
+  font-size: 32rpx;
+  color: #ddd;
+  display: block;
+}
+
+.wallet_balance i-row:nth-of-type(1) i-col:nth-of-type(2) text {
+  font-size: 25rpx;
+  color: #ddd;
+  display: block;
+  text-align: right;
+  border: 2rpx solid #ddd;
+  padding: 15rpx 20rpx;
+}
+
+.wallet .balance {
+  font-size: 50rpx;
+  display: block;
+  width: 100%;
+  margin: 100rpx 0;
+  color: #fff;
+}
+
+.wallet_balance i-row:nth-of-type(2) {
+  display: block;
+  width: 100%;
+  margin-left: -4.5%;
+  background-color: rgba(3, 3, 3, 0.1);
+  padding: 30rpx 4.5%;
+}
+
+.wallet_balance i-row:nth-of-type(2) i-col text {
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  color: rgb(238, 238, 238);
+}
+
+.wallet_balance i-row:nth-of-type(2) i-col:nth-of-type(2) text {
+  text-align: right;
+}
+.wallet_history{
+  width: 95%;
+  background-color: #fff;
+  font-size: 32rpx;
+  color: #969696;
+  padding: 38rpx 5%;
+  margin-top: 20rpx;
+}
+.CashWithdrawal{
+  position: relative;
+  top: 44%;
+}
+.CashWithdrawal button{
+  font-size: 38rpx;
+  border-radius: 0;
+  background-color: #c0bfbf;
+  color: #fff;
+}
+.CashWithdrawal button::after{
+  border: 0
+}

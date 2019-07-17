@@ -1,0 +1,11 @@
+/* pages/setting/setting.wxss */
+
+.setting {
+  width: 92%;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  padding: 38rpx 4% 18rpx 4%;
+  background-color: #fff;
+  border-bottom: 2rpx solid #f0f0f0;
+}

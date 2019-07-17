@@ -1,0 +1,172 @@
+<!--index.wxml-->
+<view class="ShoppingMall">
+
+  <!-- 头部搜索 -->
+  <view class="header_search">
+    <i-row>
+      <!-- 扫一扫 -->
+      <i-col span="4" class="header_search_Scan" bindtap="Scan">
+        <i-icon type="scan" size="25" /></i-col>
+      <!-- input输入框 -->
+      <i-col span="16" class="header_search_input">
+        <input confirm-type='search' bindinput='input1' bindconfirm='confirm1' type="text" placeholder="请搜索商品" />
+      </i-col>
+      <!-- 客服 -->
+      <i-col span="4" class="header_search_Customerservice">
+        <button open-type='contact'>
+          <i-icon type="interactive" size="25" />
+        </button>
+      </i-col>
+    </i-row>
+  </view>
+
+  <!-- banner 轮播图 -->
+  <view class="header_banner">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="{{item.id}}">
+        <swiper-item>
+          <image class="lunbo_img" src="{{item}}" class="slide-image" width="355" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 轮播-分类 -->
+  <scroll-view scroll-y="true" class="Wheelplanting_cont">
+    <i-row>
+      <view class="Wheelplanting_cont1" wx:for="{{lists}}" wx:key="{{item.id}}" bindtap="ListofGoods" data-listid="{{item.id}}">
+        <i-col span="6">
+          <image src="{{item.icon}}" />
+          <text>{{item.name}}</text>
+        </i-col>
+      </view>
+    </i-row>
+  </scroll-view>
+
+  <!-- 轮播-通知 -->
+  <view class="Wheelplanting_notice" bindtap="Notice">
+    <i-row>
+      <i-col span="2">
+        <view class="Wheelplanting_notice_icon">
+          <i-icon type="systemprompt_fill" size="20" />
+        </view>
+      </i-col>
+      <i-col span="21">
+        <swiper vertical="{{vertical}}" circular="{{true}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block>
+            <swiper-item>
+              <text>{{goods.public.shop_notice}}</text>
+            </swiper-item>
+          </block>
+          <block>
+            <swiper-item>
+              <text>{{goods.public.ship_address}}</text>
+            </swiper-item>
+          </block>
+        </swiper>
+      </i-col>
+      <i-col class="Wheelplanting_notice_icon2" span="1">
+        <i-icon type="enter" size="15" />
+      </i-col>
+    </i-row>
+  </view>
+
+  <!-- 热品推荐 -->
+  <view class="Recommendation_title">热品推荐</view>
+  <scroll-view scroll-x="true" style="height:500rpx">
+    <view class="Recommendation" scroll-x="true">
+      <view class="Recommendation_cont" wx:for="{{goods.index_hot_list}}" bindtap="CommodityDetails" wx:key="{{item.id}}" data-id='{{item.id}}' data-image="{{item.g_img}}" data-name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}">
+        <view>
+          <image src="{{item.g_img}}" />
+        </view>
+        <view>
+          <text>{{item.g_name}}</text>
+        </view>
+        <view>
+          <view id="burst-12">
+            <text>促</text>
+          </view>
+          <text>￥{{item.promote_price}}</text>
+          <text>{{item.shop_price}}</text>
+        </view>
+        <view>
+          <text>销量:</text>
+          <text>{{item.sale_number}}</text>
+          <i-icon type="publishgoods_fill" size="25" catchtap="jiagou" data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}" />
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!--新品推荐 - 滚动加载更多 -->
+  <view class="Recommendation_title">热品推荐</view>
+  <view class='box'>
+    <scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+      <view class="Recommendation_cont NewArrivals_cont" wx:for="{{res}}" wx:key="{{item.id}}" bindtap="CommodityDetails" data-id='{{item.id}}' data-image="{{item.g_img}}" data-name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}">
+        <view>
+          <image src="{{item.g_img}}" />
+        </view>
+        <view>
+          <text>{{item.g_name}}</text>
+        </view>
+        <view>
+          <view id="burst-12" style="margin-left: 20rpx;" wx:if="{{index<8}}">
+            <text>促</text>
+          </view>
+          <text>￥{{item.promote_price}}</text>
+          <text>{{item.shop_price}}</text>
+        </view>
+        <view>
+          <text>销量:</text>
+          <text>{{item.sale_number}}</text>
+          <i-icon type="publishgoods_fill" size="25" catchtap="jiagou" data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.shop_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}" />
+        </view>
+      </view>
+      <!-- 加入购物车 -->
+      <view class="zhezhao" bindtap="zhezhao" wx:if="{{iszhezhao}}" />
+      <view class="Addtocart" wx:if="{{isJiagou}}">
+        <span class="back" bindtap="unisJiagou">
+          <van-icon name="cross" />
+        </span>
+        <view class="ListofGoods_cont_img1">
+          <image src="{{modelimage}}" />
+        </view>
+        <view class="ListofGoods_content1">
+          <view>
+            <text>{{modelname}}</text>
+          </view>
+          <view>
+            <text>￥{{modelpromoteprice}}</text>
+          </view>
+          <view>
+            <text>库存:</text>
+            <text>{{modelGNumber}}</text>
+            <text>销量:</text>
+            <text>{{modelSaleNumber}}</text>
+          </view>
+        </view>
+        <view class="PurchaseQuantity">
+          <text>购买数量</text>
+          <view class="Counter">
+            <van-stepper value="{{ 1 }}" bind:change="onChange" />
+          </view>
+        </view>
+        <view class="purchases">
+          <span data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" catchtap="isAddPurchase">加入购物车</span>
+          <span data-image="{{item.g_img}}" data-name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" data-count="{{item.count}}" catchtap="ConfirmationOfOrders">立即购买</span>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 客服、购物车按钮 -->
+  <view class="cssc">
+    <view>
+      <button open-type='contact'>
+        <van-icon name="chat-o" size="20px" color="#fff" />
+      </button>
+    </view>
+    <view bindtap="ShoppingCart">
+      <van-icon name="shopping-cart-o" size="20px" color="#fff" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "查看更多",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "i-input": "../../dist/input/index",
+    "i-rate": "../../dist/rate/index"
+  }
+}

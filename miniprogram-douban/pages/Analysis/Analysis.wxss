@@ -1,0 +1,168 @@
+.Analysis {
+  width: 90%;
+  padding: 15rpx 5%;
+}
+
+.Analysis_header {
+  width: 100%;
+  height: 120rpx;
+}
+
+.Analysis_header_photo {
+  float: left;
+  width: 20%;
+}
+
+.Analysis_header_photo image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.Analysis_header_name {
+  padding-left: 5%;
+  width: 50%;
+  float: left;
+}
+
+.Analysis_header_name text {
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.Analysis_header_name text:nth-of-type(1) {
+  font-size: 35rpx;
+  color: black;
+  font-weight: 550;
+}
+
+.Analysis_header_name text:nth-of-type(2) {
+  font-size: 25rpx;
+  color: #969696;
+}
+
+.Analysis_header_Movies {
+  width: 20%;
+  float: left;
+  padding: 20rpx 0 0 5%;
+}
+
+.Analysis_header_Movies text {
+  display: block;
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  color: black;
+  font-weight: 550;
+}
+
+.Analysis_banner {
+  width: 110%;
+  margin-left: -5%;
+}
+
+.Analysis_banner image {
+  width: 100%;
+  height: 180rpx;
+}
+
+.Analysis_ready {
+  width: 100%;
+  height: 80rpx;
+  border: 0;
+  margin: 30rpx 0;
+  border-radius: 10rpx;
+  background-color: rgb(253, 187, 45);
+}
+
+.Analysis_ready .Analysis_ready_Images:nth-of-type(1) {
+  width: 20%;
+  float: left;
+}
+
+.Analysis_ready .Analysis_ready_Images:nth-of-type(1) image {
+  width: 120rpx;
+  height: 80rpx;
+}
+
+.Analysis_ready view:nth-of-type(2) {
+  width: 48%;
+  float: left;
+  padding: 0 3%;
+}
+
+.Analysis_ready view:nth-of-type(2) text {
+  line-height: 32rpx;
+  font-size: 25rpx;
+  color: #582503;
+  display: block;
+  margin: 10rpx 0;
+}
+
+.Analysis_ready view:nth-of-type(3) {
+  width: 25%;
+  float: left;
+}
+
+.Analysis_ready view:nth-of-type(3) image {
+  width: 180rpx;
+  height: 80rpx;
+}
+.Analysis_Statistics{
+  margin: 50rpx 0;
+  width: 100%;
+}
+.Analysis_Statistics text{
+  font-weight: 550; 
+  display: block;
+}
+.Analysis_Statistics_L{
+  width: 42%;
+  float: left;
+  height: 250rpx;
+  border-right: 2rpx solid #969696;
+}
+.Analysis_Statistics_L text{
+  font-size: 35rpx;
+  margin-left: 45rpx;
+  color: black;
+}
+.Analysis_Statistics_L text:nth-of-type(2){
+  margin-top: 50rpx;
+  color: #42c02e;
+}
+.Analysis_Statistics_R{
+  padding-left: 5%;
+  width: 50%;
+  height: 250rpx;
+  float: left;
+}
+.Analysis_Statistics_R text{
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.Analysis_Statistics_R text:nth-of-type(2){
+  color: #2e92c0;
+  margin-bottom: 25rpx;
+}
+.Analysis_Statistics_R text:nth-of-type(4){
+  color: #eea332;
+}
+.Analysis_looking{
+  width: 100%;
+}
+.Analysis_looking text{
+  font-size: 35rpx;
+  color: black;
+  font-weight: 550;
+}
+.Analysis_looking image{
+  width: 110%;
+  margin-left: -5%;
+}
+.Analysis_looking .year{
+  height: 450rpx;
+}
+.Analysis_looking .region{
+  height: 450rpx;
+}

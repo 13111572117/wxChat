@@ -1,0 +1,98 @@
+<!--pages/Order/Order.wxml-->
+<view class='Order'>
+  <van-tabs active="{{ 0 }}" swipe-threshold="{{ 7 }}" bind:change="onChange">
+    <van-tab title="全部">
+      <!-- orderslist数组为空时显示画面 -->
+      <view class='cardbag cardbag1' wx:if="{{orderslist === null}}">
+        <image src='../../images/kong.png' />
+        <text>暂无订单信息</text>
+      </view>
+      <!-- 订单信息 -->
+      <view class='orderslist' wx:for="{{orderslist}}" wx:key="{{index}}">
+        <i-row class="orderslist1">
+          <i-col span="19">
+            <text>点单编号：{{item.ordernumber}}</text>
+          </i-col>
+          <i-col span="5">
+            <text>待支付</text>
+          </i-col>
+        </i-row>
+        <view class='fengexian'/>
+        <i-row class="orderslist2">
+          <i-col span="6">
+            <image src='{{item.image}}' />
+          </i-col>
+          <i-col span="18">
+            <text>{{item.name}}</text>
+          </i-col>
+        </i-row>
+        <view class='fengexian'/>
+        <i-row class="orderslist3">
+          <i-col span="20">
+            <text>￥{{item.price}}</text>
+          </i-col>
+          <i-col span="4">
+            <i-icon type="trash" size='20' color='#969696' />
+          </i-col>
+        </i-row>
+      </view>
+    </van-tab>
+    <van-tab title="待支付">
+      <view class='cardbag' wx:if="{{orderslist === null}}">
+        <image src='../../images/kong.png' />
+        <text>暂无订单信息</text>
+      </view>
+      <!-- 订单信息 -->
+      <view class='orderslist' wx:for="{{orderslist}}" wx:key="{{index}}">
+        <i-row class="orderslist1">
+          <i-col span="19">
+            <text>点单编号：{{item.ordernumber}}</text>
+          </i-col>
+          <i-col span="5">
+            <text>待支付</text>
+          </i-col>
+        </i-row>
+        <view class='fengexian'/>
+        <i-row class="orderslist2">
+          <i-col span="6">
+            <image src='{{item.image}}' />
+          </i-col>
+          <i-col span="18">
+            <text>{{item.name}}</text>
+          </i-col>
+        </i-row>
+        <view class='fengexian'/>
+        <i-row class="orderslist3">
+          <i-col span="20">
+            <text>￥{{item.price}}</text>
+          </i-col>
+          <i-col span="4">
+            <i-icon type="trash" size='20' color='#969696' />
+          </i-col>
+        </i-row>
+      </view>
+    </van-tab>
+    <van-tab title="代发货">
+      <view class='cardbag'>
+        <image src='../../images/kong.png' />
+        <text>暂无订单信息</text>
+      </view>
+    </van-tab>
+    <van-tab title="待自提">
+      <view class='cardbag'>
+        <image src='../../images/kong.png' />
+        <text>暂无订单信息</text>
+      </view>
+    </van-tab>
+    <van-tab title="待收货">
+      <view class='cardbag'>
+        <image src='../../images/kong.png' />
+        <text>暂无订单信息</text>
+      </view>
+    </van-tab>
+    <van-tab title="退款">
+      {{items}}
+      <button bindtap='suiji'>生成数字</button>
+    </van-tab>
+  </van-tabs>
+</view>

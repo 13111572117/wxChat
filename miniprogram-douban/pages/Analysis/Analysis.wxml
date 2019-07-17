@@ -1,0 +1,77 @@
+<view class="Analysis">
+  <!-- 用户 -->
+  <view class="Analysis_header">
+    <view class="Analysis_header_photo">
+      <image src="../../images/user_photo.jpg" />
+    </view>
+    <view class="Analysis_header_name">
+      <text>寒冷</text>
+      <text>在豆瓣一共标记 ，看过 </text>
+    </view>
+    <view class="Analysis_header_Movies">
+      <text>0</text>
+      <text>部影视</text>
+    </view>
+  </view>
+  <!-- 爆米花 -->
+  <view class="Analysis_banner)">
+    <image src="../../images/Screenshot_2019_0701_222121.png" />
+  </view>
+  <!-- 标记看过 -->
+  <view class="Analysis_ready">
+    <view class="Analysis_ready_Images">
+      <image src="../../images/Screenshot_2019_0630_222448.png" />
+    </view>
+    <view class="Analysis_ready_text">
+      <text>标记“看过”达到10部电影即可生成分析</text>
+    </view>
+    <view class="Analysis_ready_Images">
+      <image src="../../images/Screenshot_2019_0630_222600.png" />
+    </view>
+  </view>
+  <!-- 平均每周 -->
+  <view class="Analysis_Statistics">
+    <view class="Analysis_Statistics_L">
+      <text>平均每周</text>
+      <text>— — 部电影</text>
+    </view>
+    <view class="Analysis_Statistics_R">
+      <text>这些年，为看电影电视剧花了</text>
+      <text>— — 小时</text>
+      <text>大约消费了</text>
+      <text>— — 元</text>
+    </view>
+  </view>
+  <!-- 最常看的类型 -->
+  <view class="Analysis_looking">
+    <text>最常看的类型</text>
+    <image src="../../images/Screenshot_2019_0701_222156.png" />
+  </view>
+  <!-- 影片年份分布 -->
+  <view class="Analysis_looking">
+    <text>影片年份分布</text>
+    <image class="year" src="../../images/Screenshot_2019_0701_222218.png" />
+  </view>
+  <!-- 最常看的导演和演员 -->
+  <view class="Analysis_looking">
+    <text>最常看的导演和演员</text>
+    <image src="../../images/Screenshot_2019_0701_222252.png" />
+  </view>
+  <!-- 影片地区分布 -->
+  <view class="Analysis_looking">
+    <text>影片地区分布</text>
+    <image class="region" src="../../images/Screenshot_2019_0701_222311.png" />
+  </view>
+  <!-- 标记看过 -->
+  <view class="Analysis_ready">
+    <view class="Analysis_ready_Images">
+      <image src="../../images/Screenshot_2019_0630_222448.png" />
+    </view>
+    <view class="Analysis_ready_text">
+      <text>标记“看过”达到10部电影即可生成分析</text>
+    </view>
+    <view class="Analysis_ready_Images">
+      <image src="../../images/Screenshot_2019_0630_222600.png" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,119 @@
+.List_details image{
+  width: 100%;
+  height: 390rpx;
+}
+.title{
+  padding: 20rpx 4%;
+}
+.title text{
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 550;
+}
+.title text:nth-of-type(1){
+  padding-bottom: 15rpx;
+  border-bottom:8rpx solid #eee;
+}
+.title text:nth-of-type(2){
+  color: #969696;
+}
+.title button{
+  float: right;
+  line-height: 50rpx;
+  padding: 0;
+  width: 230rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333333;
+  background-color: #f5ac3f;
+  border-radius: 50rpx;
+}
+.TVcolumn{
+  padding: 20rpx 4%;
+  /* border: 2rpx solid #333333 */
+}
+/* .TVcolumn i-row i-col{
+  height: 230px;
+} */
+.TVcolumn .column_number{
+  margin-bottom: 20rpx;
+}
+.TVcolumn .column_number text{
+  font-size: 30rpx;
+  color: #8d3a03;
+  padding: 7rpx 20rpx;
+  border-radius: 10rpx;
+  background-color: #fdc269;
+}
+.TVcolumn .column_img image{
+  width: 80%;
+  height: 250rpx;
+  border-radius: 5rpx;
+  border: 2rpx solid #969696;
+}
+.TVcolumn .column_img button{
+  position: absolute;
+  left: 4.2%;
+  margin-top: -263rpx;
+  width: 60rpx;
+  height: 60rpx;
+  padding: 0;
+  border: none;
+  border-radius: 1rpx;
+  line-height: 50rpx;
+  background: rgba(0,0,0, 0.3);
+  color: #fff;
+}
+.TVcolumn .column_sign{
+  text-align: center;
+  height: 250rpx;
+  border-left: 2rpx #969696 dashed;
+}
+.TVcolumn .column_sign i-icon{
+  color: #f5ac3f;
+  display: block;
+  margin-top: 60rpx;
+}
+.TVcolumn .column_cont text:nth-of-type(1){
+  font-size: 38rpx;
+  color: #333333;
+  font-weight: 600;
+  display: block;
+}
+.TVcolumn .column_cont{
+ padding-right: 20rpx;
+}
+.TVcolumn .column_cont i-rate{
+  line-height: 5rpx;
+}
+.TVcolumn .column_cont text:nth-of-type(2){
+  font-size: 30rpx;
+  color: #969696;
+  line-height: 50rpx;
+}
+.TVcolumn .column_cont text:nth-of-type(3){
+  display: block;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #969696;
+}
+.TVcolumn .column_sign text{
+  display: block;
+  font-size: 30rpx;
+  color: #f5ac3f;
+}
+.TVcolumn .column_cont2{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  background-color: #f5f5f5;
+}
+.TVcolumn .column_cont2 text{
+  color: #969696;
+}
+.fengexian{
+  margin: 50rpx 0 0 -5%;
+  width: 110%;
+  background-color: #eee;
+  height: 20rpx;
+}

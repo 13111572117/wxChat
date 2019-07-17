@@ -1,0 +1,289 @@
+.CommodityDetails {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding-bottom: 130rpx;
+}
+
+.CommodityDetails .CommodityDetails_header_banner {
+  width: 99%;
+  height: 600rpx;
+  margin: 0 auto;
+  border: 2rpx solid #969696;
+}
+
+.CommodityDetails .CommodityDetails_header_banner image {
+  width: 100%;
+  height: 600rpx;
+}
+
+/* 促 爆红星 */
+
+.CommodityDetails_header_cont {
+  width: 100%;
+  height: 220rpx;
+  border-bottom: 2rpx solid #fff;
+  background-color: #fff;
+}
+
+#burst-12 {
+  width: 30rpx;
+  height: 30rpx;
+  background-color: red;
+  position: relative;
+  text-align: center;
+  float: left;
+  margin-right: 10rpx;
+  margin-top: 5rpx;
+}
+
+#burst-12:before, #burst-12:after {
+  width: 30rpx;
+  height: 30rpx;
+  top: 0;
+  left: 0;
+  background-color: red;
+  position: absolute;
+  content: "";
+}
+
+#burst-12:before {
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+
+#burst-12:after {
+  transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+}
+
+#burst-12 text {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: block;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  color: #fff;
+  z-index: 1;
+}
+
+.CommodityDetails_contentL {
+  width: 84%;
+  margin-left: 3%;
+  float: left;
+}
+
+.CommodityDetails_contentL view:nth-of-type(1) {
+  font-size: 30rpx;
+  color: #333;
+  margin: 15rpx 0 25rpx 0;
+}
+
+.CommodityDetails_contentL view:nth-of-type(2) {
+  margin-bottom: 10rpx;
+  font-size: 32rpx;
+  color: red;
+}
+
+.CommodityDetails_contentL view:nth-of-type(3) {
+  width: 100%;
+  float: left;
+}
+
+.CommodityDetails_contentL view:nth-of-type(3) text:nth-of-type(1),
+text:nth-of-type(3) {
+  font-size: 28rpx;
+  color: #969696;
+}
+
+.CommodityDetails_contentL view:nth-of-type(3) text:nth-of-type(2),
+text:nth-of-type(4) {
+  font-size: 23rpx;
+  color: #969696;
+}
+
+.CommodityDetails_contentR {
+  width: 10%;
+  float: left;
+}
+
+.CommodityDetails_contentR button {
+  padding: 0;
+  line-height: 50rpx;
+  background-color: #fff;
+}
+
+.CommodityDetails_contentR button::after {
+  border: none;
+}
+
+.CommodityDetails_contentR {
+  padding-top: 15rpx;
+  text-align: center;
+}
+
+.CommodityDetails_contentR text {
+  display: block;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #969696;
+}
+
+/* 详情评价 */
+
+.Detailed-evaluation {
+  width: 100%;
+}
+
+.Detailed-evaluation text {
+  width: 100%;
+  display: block;
+  font-size: 48rpx;
+  color: #969696;
+  background-color: #fff;
+}
+
+.Detailed-evaluation image:nth-of-type(1) {
+  width: 100%;
+  height: 550rpx;
+}
+
+.Detailed-evaluation image:nth-of-type(2) {
+  width: 100%;
+  height: 650rpx;
+}
+
+.evaluation {
+  text-align: center;
+  width: 100%;
+  padding: 150rpx 0;
+  background-color: #fff;
+}
+
+.evaluation text {
+  font-size: 35rpx;
+  display: block;
+  margin-top: 30rpx;
+}
+
+.van-tabs__line {
+  height: 5rpx !important;
+}
+
+/* 加购 */
+
+.ShoppingCart {
+  text-align: center;
+  line-height: 100rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  right: 5%;
+  bottom: 130rpx;
+}
+
+/* 客服 */
+
+.isCustomerService {
+  padding: 5rpx 20rpx;
+  border-radius: 80rpx;
+  width: 30%;
+  position: fixed;
+  bottom: 110rpx;
+  left: 10%;
+  background-color: #fff;
+  color: #969696;
+  box-shadow: 0 0 16rpx rgba(0, 0, 0, 0.3);
+}
+
+.isCustomerService view {
+  font-size: 28rpx;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.isCustomerService i-icon {
+  display: block;
+  height: 38rpx;
+  margin-left: 35rpx;
+}
+
+.isCustomerService view:nth-of-type(2) button {
+  background-color: #fff;
+}
+
+.isCustomerService view:nth-of-type(2) button::after {
+  border: 0;
+}
+
+.isCustomerService view:nth-of-type(2) button>i-icon {
+  margin-left: 0;
+}
+
+.isCustomerService text {
+  width: 100%;
+  float: left;
+  display: block;
+}
+
+.AddPurchase {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.AddPurchase text {
+  display: block;
+  color: #969696;
+  font-size: 28rpx;
+}
+
+.AddPurchase .title {
+  height: 100%;
+  padding: 5rpx 0;
+  border: 1rpx solid #eee;
+  border-style: solid solid none none;
+}
+
+.AddPurchase i-col:nth-of-type(1) .title van-icon {
+  height: 22px;
+  line-height: 70rpx;
+  display: block;
+}
+
+.AddPurchase i-col:nth-of-type(3) .title {
+  border-right: 0;
+}
+
+.Collection, .CustomerService {
+  color: #fce14c;
+}
+
+.unCollection, .unCustomerService {
+  color: #969696;
+}
+
+.AddPurchase span {
+  width: 100%;
+  height: 100rpx;
+  display: block;
+  background-color: #fce14c;
+  font-size: 33rpx;
+  line-height: 100rpx;
+  color: #fff;
+}
+
+.AddPurchase i-col:nth-of-type(5) span {
+  background-color: red;
+}

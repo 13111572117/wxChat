@@ -1,0 +1,69 @@
+<!--logs.wxml-->
+<view class="bangdan">
+  <view class="bangdanBanner">
+    <image bindtap="Isbangdan" src="../../images/1.jpg" />
+    <image src="../../images/2.jpg" />
+    <image src="../../images/3.jpg" />
+  </view>
+  <!-- 外语电影 -->
+  <view class="bangdanCont">
+    <navigator url="../List_details/List_details">
+      <view class="contImg">
+        <image class="upload_Item_img" src="../../images/top250.png" />
+      </view>
+      <view class="contTitle">
+        <navigator wx:for="{{bangdanCont}}" wx:if="{{index<3}}">{{index+1}} . {{item.title}}
+          <text> {{item.rating.average}}分</text>
+        </navigator>
+      </view>
+    </navigator>
+  </view>
+  <!-- 华语电影 -->
+  <view class="bangdanCont">
+    <view class="contImg">
+      <image class="upload_Item_img" src="../../images/bangdanbj.png" />
+      <view class="contImg_title">
+        <text>评分最高</text>
+        <text>华语电影</text>
+        <text>2018</text>
+      </view>
+    </view>
+    <view class="contTitle">
+      <navigator wx:for="{{bangdanCont1}}" wx:if="{{index<3}}">{{index+1}} . {{item.title}}
+        <text> {{item.rating.average}}分</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 科幻片 -->
+  <view class="bangdanCont">
+    <view class="contImg">
+      <image class="upload_Item_img" src="../../images/bangdanbj.png" />
+      <view class="contImg_title">
+        <text>评分最高</text>
+        <text>科幻片</text>
+        <text>2018</text>
+      </view>
+    </view>
+    <view class="contTitle">
+      <navigator wx:for="{{bangdanCont2}}" wx:if="{{index<3}}">{{index+1}} . {{item.title}}
+        <text> {{item.rating.average}}分</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 热门剧集 -->
+  <view class="bangdanCont">
+    <view class="contImg">
+      <image class="upload_Item_img" src="../../images/bangdanbj.png" />
+      <view class="contImg_title">
+        <text>评分最高</text>
+        <text>畅销图书</text>
+        <text>2018</text>
+      </view>
+    </view>
+    <view class="contTitle">
+      <navigator wx:for="{{bangdanCont3}}" wx:if="{{index<3}}">{{index+1}} . {{item.title}}
+        <text> {{item.rating.average}}分</text>
+      </navigator>
+    </view>
+  </view>
+</view>

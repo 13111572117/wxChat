@@ -1,0 +1,20 @@
+/* pages/cardbag/cardbag.wxss */
+page{
+  height: 100%;
+}
+.cardbag{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.cardbag image{
+  margin: 150rpx 0 100rpx;
+  width: 280rpx;
+  height: 250rpx;
+}
+.cardbag text{
+  display: block;
+  font-size: 38rpx;
+  color: #969696;
+}

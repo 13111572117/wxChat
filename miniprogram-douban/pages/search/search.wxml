@@ -1,0 +1,118 @@
+<view class="search">
+  <input type="text" placeholder="搜索" />
+</view>
+<!-- 影院热映 -->
+<view class="Cinema">
+  <text>影院热映</text>
+  <navigator url="/pages/more/more" hover-class="none">
+    <text>查看更多 ></text>
+  </navigator>
+</view>
+<scroll-view scroll-x="true">
+  <view class="uploadWrap" scroll-x="true">
+    <view class="upload_Item" wx:for="{{subjects}}">
+      <!-- navigator：页面跳转链接 -->
+      <view bindtap="details" data-newsid="{{item.id}}">
+        <image class="upload_Item_img" src="{{item.images.large}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <i-cell>
+        <i-rate bind:change="" disabled="{{true}}" value="{{item.rating.average/2}}" size="10">
+        </i-rate>
+        <text>{{item.rating.average}}</text>
+      </i-cell>
+    </view>
+  </view>
+</scroll-view>
+<!-- 豆瓣热门 -->
+<view class="Cinema">
+  <text>豆瓣热门</text>
+  <navigator url="/pages/more1/more1" hover-class="none">
+    <text>查看更多 ></text>
+  </navigator>
+</view>
+<scroll-view scroll-x="true">
+  <view class="uploadWrap" scroll-x="true">
+    <view class="upload_Item" wx:for="{{subjects_top250}}">
+      <!-- navigator：页面跳转链接 -->
+      <view bindtap="details" data-newsid="{{item.id}}">
+        <image class="upload_Item_img" src="{{item.images.large}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <i-cell>
+        <i-rate bind:change="" disabled="{{true}}" value="{{item.rating.average/2}}" size="10">
+        </i-rate>
+        <text>{{item.rating.average}}</text>
+      </i-cell>
+    </view>
+  </view>
+</scroll-view>
+<!-- 近期热门影视 -->
+<view class="Cinema">
+  <text>近期热门影视</text>
+  <navigator url="/pages/more2/more2" hover-class="none">
+    <text>查看更多 ></text>
+  </navigator>
+</view>
+<scroll-view scroll-x="true">
+  <view class="uploadWrap" scroll-x="true">
+    <view class="upload_Item" wx:for="{{subjects_soon}}">
+      <!-- navigator：页面跳转链接 -->
+      <view bindtap="details" data-newsid="{{item.id}}">
+        <image class="upload_Item_img" src="{{item.images.large}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <i-cell>
+        <i-rate bind:change="" disabled="{{true}}" value="{{item.rating.average/2}}" size="10">
+        </i-rate>
+        <text>{{item.rating.average}}</text>
+      </i-cell>
+    </view>
+  </view>
+</scroll-view>
+<!-- 畅销图书 -->
+<view class="Cinema">
+  <text>畅销图书</text>
+  <navigator url="/pages/more3/more3" hover-class="none">
+    <text>查看更多 ></text>
+  </navigator>
+</view>
+<scroll-view scroll-x="true">
+  <view class="uploadWrap" scroll-x="true">
+    <view class="upload_Item" wx:for="{{subjects_zongyi}}">
+      <!-- navigator：页面跳转链接 -->
+      <view bindtap="well_received" data-newsid="{{item.id}}">
+        <image class="upload_Item_img" src="{{item.images.large}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <i-cell>
+        <i-rate bind:change="" disabled="{{true}}" value="{{item.rating.average/2}}" size="10">
+        </i-rate>
+        <text>{{item.rating.average}}</text>
+      </i-cell>
+    </view>
+  </view>
+</scroll-view>
+<!-- 热门单曲榜 -->
+<view class="Cinema">
+  <text>热门单曲榜</text>
+  <navigator url="/pages/more4/more4" hover-class="none">
+    <text>查看更多 ></text>
+  </navigator>
+</view>
+<scroll-view scroll-x="true">
+  <view class="uploadWrap musics" scroll-x="true">
+    <view class="upload_Item" wx:for="{{subjects_music}}">
+      <!-- navigator：页面跳转链接 -->
+      <view bindtap="wel_musics" data-newsid="{{item.id}}">
+        <image class="upload_Item_img" src="{{item.image}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <i-cell>
+        <i-rate bind:change="" disabled="{{true}}" value="{{item.rating.average/2}}" size="10">
+        </i-rate>
+        <text>{{item.rating.average}}</text>
+      </i-cell>
+    </view>
+  </view>
+</scroll-view>

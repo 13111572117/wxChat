@@ -1,0 +1,41 @@
+<view class="List_details">
+  <image src="../../images/List_details_beijing.png" />
+  <view class="title">
+    <text>看过0部</text>
+    <text>/ 共250部</text>
+    <button>登录查看成就</button>
+  </view>
+  <view class="TVcolumn" wx:for="{{TVcolumn}}" bindtap="TVdetails" data-newsid="{{item.id}}" data-name="{{item.title}}">
+      <i-row>
+        <!-- No. -->
+        <i-col span="24" i-class="column_number">
+          <text>No.{{index+1}}</text>
+        </i-col>
+        <!-- 影视海报 -->
+        <i-col span="8" i-class="column_img">
+          <image src="{{item.images.large}}" />
+          <button>
+            <i-icon type="label" size="20" />
+          </button>
+        </i-col>
+        <!-- 影视介绍 -->
+        <i-col span="12" i-class="column_cont">
+          <text>{{item.title}}</text>
+          <i-rate size="15" bind:change="" value="{{item.rating.average/2}}" />
+          <!-- 评分 -->
+          <text>{{item.rating.average}}</text>
+          <text>{{item.pubdates[1]}} / {{item.genres[0]}} {{item.genres[1]}} / {{item.directors[0].name}} / {{item.casts[0].name}} {{item.casts[1].name}} {{item.casts[2].name}}</text>
+        </i-col>
+        <!-- 看过 -->
+        <i-col span="4" i-class="column_sign">
+          <i-icon type="collection" size="20" />
+          <text>看过</text>
+        </i-col>
+        <!-- 寄语 -->
+        <i-col span="24" i-class="column_cont2">
+          <text>{{item.original_title}}</text>
+        </i-col>
+      </i-row>
+    <view class="fengexian" />
+  </view>
+</view>

@@ -1,0 +1,144 @@
+page {
+  height: 100%;
+}
+
+.my {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+/* 头部头像 */
+
+.my .my_header {
+  width: 100%;
+  padding-bottom: 20rpx;
+}
+
+.my_header image {
+  width: 100%;
+  height: 380rpx;
+}
+
+.users {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.users open-data:nth-of-type(1) {
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.users open-data:nth-of-type(2) {
+  font-size: 42rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 30rpx;
+  display: block;
+}
+
+.my_header button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  font-size: 38rpx;
+  color: #969696;
+}
+
+.my_header_title {
+  text-align: center;
+  width: 100%;
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+
+.my_header_title text {
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color: #333;
+  display: block;
+}
+
+/* 花店商店 */
+
+.my_FlowerShop {
+  width: 100%;
+  padding: 20rpx 0 0;
+  background-color: #fff;
+}
+
+.my_FlowerShop .my_FlowerShop_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  padding: 10rpx 4% 30rpx 4%;
+  width: 92%;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+
+.my_FlowerShop_column {
+  width: 100%;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 55rpx;
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.my_FlowerShop_column text {
+  display: block;
+}
+
+/* rotateStyle{ */
+
+/* } */
+
+.unrotateStyle {
+  display: block;
+  /* color: red; */
+  transform: rotate(90deg);
+}
+
+/* 设置 */
+
+.my_setting {
+  margin-top: 25rpx;
+  width: 92%;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  padding: 30rpx 4% 18rpx 4%;
+  background-color: #fff;
+}
+
+.footer_text {
+  width: 100%;
+  font-size: 30rpx;
+  padding: 50rpx 0;
+  text-align: center;
+  color: #969696;
+}
+
+.footer_text text {
+  display: block;
+  width: 68%;
+  text-align: right;
+  float: left;
+}
+
+.footer_text wux-icon {
+  margin: -7rpx 10rpx;
+  display: block;
+  width: 50rpx;
+  float: left;
+}

@@ -1,0 +1,114 @@
+<!--logs.wxml-->
+<view class="EuropeanCommission">
+  <view class="EuropeanCommission_header">
+    <i-row>
+      <i-col span="20">
+        <input type="text" placeholder="搜索商品" />
+        <i-icon type="search" size="18" />
+      </i-col>
+      <i-col span="4" bindtap="ShoppingCart">
+        <i-icon type="publishgoods_fill" size="28" />
+      </i-col>
+    </i-row>
+  </view>
+  <!-- 左侧分类标题栏 -->
+  <view class="EuropeanCommission_contL">
+    <scroll-view scroll-y>
+      <view class="EuropeanCommission_contL_title {{currenData==index?'untitleL':''}}" wx:for="{{lists}}" data-index="{{index}}" wx:for-index="index" wx:key="{{item.id}}" bindtap="titleL">
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 右侧内容 -->
+  <view class="EuropeanCommission_contR">
+    <!-- 右侧上部重新排序 -->
+    <view class="EuropeanCommission_contR_title">
+      <view class="header_column">
+        <i-row>
+          <i-col span="8">
+            <view bindtap="toggle" class="{{ellipsis?'ellipsis':'unellipsis'}}">
+              <text>综合排序</text>
+            </view>
+          </i-col>
+          <i-col span="8">
+            <view bindtap="toggle3" class="{{ellipsis3?'ellipsis3':'unellipsis3'}}">
+              <text>按价格</text>
+              <view class="arrow-dropdown">
+                <wux-icon class="arrow-dropup {{ellipsis4?'ellipsis4':'unellipsis4'}}" type="md-arrow-dropup" size="18" />
+                <wux-icon class="{{ellipsis5?'ellipsis5':'unellipsis5'}}" type="md-arrow-dropdown" size="18" />
+              </view>
+            </view>
+          </i-col>
+          <i-col span="8">
+            <view bindtap="toggle2" class="{{ellipsis2?'ellipsis2':'unellipsis2'}}">
+              <text>按销量</text>
+            </view>
+          </i-col>
+        </i-row>
+      </view>
+    </view>
+    <!-- 右侧商品列表内容 -->
+    <view class="EuropeanCommission_contR_list">
+      <view class="ListofGoods_cont {{layout?'layout':'layout2'}}">
+        <!-- <scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'> -->
+        <view class="res" wx:for="{{res}}" wx:key="{{item.id}}" bindtap="CommodityDetails" data-image="{{item.g_img}}" data-name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}">
+          <view class="ListofGoods_cont_img">
+            <image src="{{item.g_img}}" />
+          </view>
+          <view class="ListofGoods_content">
+            <view>
+              <text>{{item.g_name}}</text>
+            </view>
+            <view>
+              <view id="burst-12">
+                <text>促</text>
+              </view>
+              <text>￥{{item.promote_price}}</text>
+              <text>{{item.shop_price}}</text>
+            </view>
+            <view>
+              <text>销量:</text>
+              <text>{{item.sale_number}}</text>
+              <i-icon type="publishgoods_fill" size="25" catchtap="jiagou" data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}" />
+            </view>
+          </view>
+          <!-- 加入购物车 -->
+          <view class="zhezhao" catchtap="zhezhao" wx:if="{{iszhezhao}}" />
+          <view class="Addtocart" wx:if="{{isJiagou}}">
+            <span class="back" catchtap="unisJiagou">
+              <van-icon name="cross" />
+            </span>
+            <view class="ListofGoods_cont_img1">
+              <image src="{{modelimage}}" />
+            </view>
+            <view class="ListofGoods_content1">
+              <view>
+                <text>{{modelname}}</text>
+              </view>
+              <view>
+                <text>￥{{modelpromoteprice}}</text>
+              </view>
+              <view>
+                <text>库存:</text>
+                <text>{{modelGNumber}}</text>
+                <text>销量:</text>
+                <text>{{modelSaleNumber}}</text>
+              </view>
+            </view>
+            <view class="PurchaseQuantity">
+              <text>购买数量</text>
+              <view class="Counter">
+                <van-stepper value="{{ 1 }}" bind:change="onChange" />
+              </view>
+            </view>
+            <view class="purchases">
+              <span id="{{item.id}}" data-id="{{item.id}}" data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" catchtap="isAddPurchase">加入购物车</span>
+              <span>立即购买</span>
+            </view>
+          </view>
+        </view>
+        <!-- </scroll-view> -->
+      </view>
+    </view>
+  </view>
+</view>

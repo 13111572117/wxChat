@@ -1,0 +1,23 @@
+.Want_to_see {
+  padding: 20rpx 5%;
+}
+.Want_to_see textarea{
+  width: auto;
+  border-radius: 10rpx;
+  border: 2rpx solid #f0f0f0;
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #969696;
+}
+/* .Want_to_see textarea::-moz-placeholder{ */
+  /* font-size: 128rpx; */
+  /* color: #e71f1f; */
+/* } */
+.Want_to_see button{
+  margin-top: 50rpx;
+  font-weight: 600;
+  font-size: 35rpx;
+  color: #fff;
+  background-color: #0ec052;
+  border-radius: 10rpx;
+}

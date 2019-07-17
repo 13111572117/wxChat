@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/well_received/well_received",
+    "pages/wel_musics/wel_musics",
+    "pages/more/more",
+    "pages/more1/more1",
+    "pages/more2/more2",
+    "pages/more3/more3",
+    "pages/more4/more4",
+    "pages/List/List",
+    "pages/List_details/List_details",
+    "pages/details/details",
+    "pages/Want_to_see/Want_to_see",
+    "pages/Seen/Seen",
+    "pages/index/index",
+    "pages/highestScore/highestScore",
+    "pages/myuser/myuser",
+    "pages/SignIn/SignIn",
+    "pages/Analysis/Analysis"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#42c02e",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#ff4f4c",
+    "selectedColor": "#ff4f4c",
+    "backgroundColor": "#f0f0f0",
+    "list": [
+      {
+        "pagePath": "pages/search/search",
+        "text": "首页",
+        "selectedIconPath": "./images/shouye1.png",
+        "iconPath": "./images/shouye.png"
+      },
+      {
+        "pagePath": "pages/List/List",
+        "text": "榜单",
+        "selectedIconPath": "./images/shipin1.png",
+        "iconPath": "./images/shipin.png"
+      },
+      {
+        "pagePath": "pages/myuser/myuser",
+        "text": "我的",
+        "selectedIconPath": "./images/wode1.png",
+        "iconPath": "./images/wode.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-icon": "./dist/icon/index",
+    "i-row": "./dist/row/index",
+    "i-col": "./dist/col/index",
+    "i-rate": "./dist/rate/index"
+  }
+}

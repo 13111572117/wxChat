@@ -1,0 +1,45 @@
+<view class='wrap'>
+  <view wx:for="{{addcollection}}" wx:key="addcollection" class='cont' bindtap='shopdate' data-shopimg='{{item.g_img}}' data-shopname='{{item.g_name}}' data-shopprice='{{item.shop_price}}' data-shopnum='{{item.sale_number}}' data-shopgnum='{{item.shopgnum}}' data-id='{{item.id}}'>
+    <image src='{{item.g_img}}' class='cont-img'></image>
+    <view class='cont-r'>
+      <text class='cont-title'>{{item.g_name}}</text>
+      <view class='cont-price'>￥{{item.shop_price}}</view>
+      <view class='cont-number'>销量：{{item.sale_number}}
+        <van-icon name="shopping-cart-o" size='22px' color='#ff3c3c' catchtap='shopcar' data-shopimg='{{item.g_img}}' data-shopname='{{item.g_name}}' data-shopprice='{{item.shop_price}}' data-shopnum='{{item.sale_number}}' data-shopgnum='{{item.shopgnum}}'
+              id="{{item.id}}" data-id='{{item.id}}' />
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 点击购物车弹出下拉菜单页面 -->
+<van-action-sheet show="{{ show1 }}" overlay="{{true}}" close-on-click-overlay="{{true}}" bind:close="onClose">
+  <view class='shopcar'>
+    <view class='shopcar-title'>
+      <image src='{{shopimg}}'></image>
+      <view class='shopcar-title-r'>
+        <view class='shopcar-title-name'>
+          {{shopname}}
+        </view>
+        <view class='shopcar-title-price'>
+          ￥{{shopprice}}
+        </view>
+        <view class='shopcar-title-inventory'>
+          <text>库存：{{shopgnum}}</text>
+          <text>销量：{{shopnum}}</text>
+        </view>
+        <view class='close' bindtap='close'>
+          <van-icon name="cross" />
+        </view>
+      </view>
+    </view>
+    <view class='shopnumber' style=''>
+      购买数量：
+      <van-stepper value="{{ 1 }}" bind:change="onChange" />
+    </view>
+    <van-goods-action>
+      <van-goods-action-button text="加入购物车" type="warning" bind:click="addcart" id='{{id}}' />
+      <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+    </van-goods-action>
+  </view>
+</van-action-sheet>

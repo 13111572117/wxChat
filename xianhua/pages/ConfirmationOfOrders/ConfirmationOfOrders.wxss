@@ -1,0 +1,308 @@
+/* pages/ConfirmationOfOrders/ConfirmationOfOrders.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.ConfirmationOfOrders {
+  width: 100%;
+  height: 98%;
+  padding: 2% 0 80rpx 0;
+  background-color: #f5f5f5;
+}
+
+/* 订单信息 */
+
+.commodityInformation {
+  width: 92%;
+  padding: 15rpx 4%;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.commodityInformation image {
+  width: 90%;
+  height: 130rpx;
+}
+
+.commodityInformation i-col:nth-of-type(2) text {
+  display: block;
+  margin-top: 15rpx;
+}
+
+.commodityInformation i-col:nth-of-type(2) text:nth-of-type(2) {
+  color: #f3514e;
+}
+
+.commodityInformation  i-col:nth-of-type(3) {
+  line-height: 140rpx;
+}
+
+/* Delivery */
+
+.Delivery {
+  width: 92%;
+  background-color: #fff;
+  padding: 0 4%;
+  font-size: 32rpx;
+}
+
+.Delivery .peisong {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 20rpx 0 0rpx 0;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+
+.huoqu {
+  width: 100%;
+  height: 80rpx;
+  line-height: 60rpx;
+  border: none;
+  margin: 20rpx 0 0rpx 0;
+}
+
+/* 姓名、电话 */
+
+.gerenxinxi {
+  width: 92%;
+  margin-top: 10rpx;
+  padding: 15rpx 4%;
+  background-color: #fff;
+  float: left;
+}
+
+.gerenxinxi text {
+  display: block;
+  width: 18%;
+  float: left;
+  font-size: 33rpx;
+  color: #333;
+}
+
+.gerenxinxi input {
+  width: 82%;
+  float: left;
+  font-size: 32rpx;
+  color: #969696;
+}
+
+.Self-addressedAddress {
+  float: left;
+  margin-top: 10rpx;
+  width: 92%;
+  padding: 20rpx 4%;
+  background-color: #fff;
+}
+
+.Self-addressedAddress text {
+  font-size: 32rpx;
+  color: #969696;
+}
+
+.Self-addressedAddress1 i-col:nth-of-type(2) text {
+  font-size: 28rpx;
+  color: #f3514e;
+  line-height: 55rpx;
+}
+
+.Self-addressedAddress1 i-col:nth-of-type(2) {
+  text-align: right;
+}
+
+.Self-addressedAddress2 text {
+  line-height: 80rpx;
+  font-size: 38rpx;
+  margin-right: 20rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.Self-addressedAddress3 text {
+  font-size: 28rpx;
+}
+
+.Self-addressedAddress3 i-col:nth-of-type(2) {
+  text-align: right;
+}
+
+/* 订单信息 */
+
+.orderInformation {
+  float: left;
+  width: 92%;
+  padding: 20rpx 4%;
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+
+.orderInformation text {
+  font-size: 32rpx;
+  line-height: 50rpx;
+  float: left;
+}
+
+.orderInformation input {
+  font-size: 30rpx;
+  float: left;
+}
+
+.orderInformation i-icon {
+  float: right;
+}
+
+/* 商品价格 */
+
+.commodityPrice text {
+  width: auto;
+  float: right;
+}
+
+.commodityPrice text:nth-of-type(1) {
+  color: #f3514e;
+}
+
+.placeOrder {
+  float: left;
+  position: fixed;
+  bottom: 0;
+  border-top: 2rpx solid #f0f0f0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 33rpx;
+  color: #333;
+}
+
+.placeOrderL {
+  width: 65%;
+  line-height: 80rpx;
+  float: left;
+}
+
+.placeOrderL text:nth-of-type(2) {
+  color: #f3514e;
+}
+
+.placeOrderR {
+  width: 35%;
+  float: left;
+}
+
+.placeOrderR button {
+  background-color: #f3514e;
+  font-size: 35rpx;
+  color: #fff;
+  border-radius: 0;
+}
+
+button::after {
+  border: 0;
+  border-radius: 0;
+}
+
+/* 订单支付 */
+
+.OrderPayment {
+  padding: 30rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #fff;
+  width: 70%;
+  /* height: 60%; */
+  border-radius: 20rpx;
+}
+
+.OrderPaymentor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.zhezhao {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 关闭下单窗口 */
+
+.switch {
+  position: fixed;
+  top: 20rpx;
+  right: 20rpx;
+  z-index: 2;
+  padding: 6rpx 8rpx;
+  line-height: 36rpx;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.OrderPayment .title {
+  display: block;
+  text-align: center;
+  font-size: 38rpx;
+  color: #333;
+}
+
+.OrderPayment text {
+  display: block;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.PaymentPrice text:nth-of-type(1) {
+  font-size: 50rpx;
+  color: #f3514e;
+  text-align: center;
+}
+
+.PaymentPrice text:nth-of-type(2), .PaymentPrice text:nth-of-type(3) {
+  text-align: center;
+}
+
+.PaymentPrice text:nth-of-type(3) {
+  color: #969696;
+  font-size: 28rpx;
+}
+
+/* 订单信息 */
+
+.isorderInformation text {
+  width: 92%;
+  padding: 10rpx 20rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+
+.isorderInformation text:nth-of-type(1), .PaymentModeTitle {
+  color: #969696;
+  background-color: #f0f0f0;
+  width: 90%;
+  margin: 20rpx 0 10rpx 0;
+  border-radius: 5rpx;
+  padding: 10rpx 5%;
+  border-bottom: 0;
+}
+
+.isorderInformation text:nth-of-type(4) {
+  border-bottom: 0;
+}
+
+.PaymentMode button {
+  margin-top: 80rpx;
+  width: 60%;
+  background-color: #f3514e;
+  font-size: 35rpx;
+  color: #fff;
+  border: 0;
+}

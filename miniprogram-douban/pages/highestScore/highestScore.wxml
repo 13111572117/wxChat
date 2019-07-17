@@ -1,0 +1,77 @@
+<!-- 榜单评分最高电影 -->
+<view class="highestScore">
+  <!-- header -->
+  <view class="userinfo">
+    <view class="header_viode">
+      <text>看过0部 /</text>
+      <text>共10部</text>
+      <span>生成海报</span>
+      <text>评分最高话语电影</text>
+      <text>豆瓣2018年度电影榜单</text>
+      <image src="../../images/p3190.jpg" />
+    </view>
+    <!-- 我不是药神 -->
+    <view class="FilmTelevision">
+      <image src="../../images/yaoshen.jpg" />
+      <view class="FilmTelevision_cont1">
+        <text>我不是药神<i-icon type="integral" /></text>
+        <!-- 图形评分 -->
+        <view class="Graphical_score">
+          <view class="score_title">
+            <text>豆瓣评分</text>
+            <text>TM</text>
+            <span>
+              <i-icon type="collection" size="16" /> 看过
+            </span>
+          </view>
+          <view class="pingfen">
+            <view class="Graphical_score_L">
+              <text class="Graphical_score_N">9.0</text>
+              <i-rate class="Graphical_score_I" size="10" value="5" />
+            </view>
+            <view class="Graphical_score_C">
+              <i-rate class="Graphical_score_I" count="{{5}}" size="6" />
+              <i-rate class="Graphical_score_I" count="{{4}}" size="6" />
+              <i-rate class="Graphical_score_I" count="{{3}}" size="6" />
+              <i-rate class="Graphical_score_I" count="{{2}}" size="6" />
+              <i-rate class="Graphical_score_I" count="{{1}}" size="6" />
+            </view>
+            <view class="Graphical_score_R">
+              <i-rate class="Graphical_score_I" count="{{5}}" size="15" value="5" />
+              <text>1142779人评分</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="Television_cont">
+      <text>"你敢保证你一辈子不得病？"纯粹、直接、有力！常常感叹：电影只能是电影。但每看到这样的佳作，有感慨：电影不只是电影！由衷的希望这部电影大卖！... 忻珏坤</text>
+    </view>
+    <!--  -->
+    <view class="viode_zhezhao">
+      <image src="../../images/p3472.jpg" />
+    </view>
+  </view>
+  <!-- content -->
+  <view class="ColumnCont" wx:for="{{subjects}}">
+  <!-- <view class="ColumnCont"> -->
+    <view class="ColumnCont_number">
+      <text>{{index+2}}</text>
+      <view></view>
+    </view>
+    <view class="ColumnCont_img">
+      <span>
+        <i-icon type="like" />
+      </span>
+      <image src="{{item.subject.images.large}}" />
+      <text class="name">{{item.subject.title}}</text>
+      <i-rate count="5" value="{{item.subject.rating.average/2}}" size="12">
+      </i-rate>
+      <text class="number">{{item.subject.rating.average}}</text>
+      <view class="Seen" bindtap="IsSeen">
+        <i-icon type="collection" />
+        <text>看过</text>
+      </view>
+    </view>
+  </view>
+</view>

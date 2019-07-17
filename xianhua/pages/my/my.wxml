@@ -1,0 +1,84 @@
+<!-- 我的 -->
+<view class="my">
+  <!-- 头部头像 -->
+  <view class="my_header">
+    <image src="../../images/mybj.png" />
+    <!-- getUserInfo -->
+    <button open-type="getUserInfo" bindtap="user" wx:if="{{isuser}}">获取头像及昵称</button>
+    <view class="users" wx:if="{{isusers}}">
+      <open-data type="userAvatarUrl"></open-data>
+      <!-- <image src="{{avatarUrl}}"/> -->
+      <open-data type="userNickName"></open-data>
+      <!-- <text>1111{{nickName}}</text> -->
+    </view>
+    <view class="my_header_title">
+      <i-row>
+        <i-col span="8" bindtap="wallet">
+          <i-icon type="financial_fill" size="26" color="#333" />
+          <text>福包</text>
+        </i-col>
+        <i-col span="8" bindtap="IntegralMall">
+          <i-icon type="service_fill" size="25" color="#333" />
+          <text>积分商城</text>
+        </i-col>
+        <i-col span="8" bindtap="cardbag">
+          <van-icon name="card" size="22px" color="#333" />
+          <text>卡包</text>
+        </i-col>
+      </i-row>
+    </view>
+  </view>
+  <!-- 花店商城 -->
+  <view class="my_FlowerShop" bindtap="column">
+    <view class="my_FlowerShop_title">
+      <i-row>
+        <i-col span="2">
+          <van-icon name="shop-collect" size="18px" />
+        </i-col>
+        <i-col span="21">
+          <text>花店商城</text>
+        </i-col>
+        <i-col span="1">
+          <i-icon class="{{rotateStyle?'rotateStyle':'unrotateStyle'}}" type="enter" />
+        </i-col>
+      </i-row>
+    </view>
+    <!-- -- -->
+    <view class="my_FlowerShop_column" wx:if="{{isShow}}">
+      <i-row>
+        <i-col span="6" catchtap="Order">
+          <van-icon name="completed" size="18px" />
+          <text>我的订单</text>
+        </i-col>
+        <i-col span="6" catchtap="cardbag">
+          <van-icon name="coupon-o" size="18px" />
+          <text>我的优惠券</text>
+        </i-col>
+        <i-col span="6" catchtap="Collection">
+          <van-icon name="eye-o" size="18px" />
+          <text>我的收藏</text>
+        </i-col>
+        <i-col span="6">
+          <van-icon name="cluster-o" size="18px" />
+          <text>我的分销</text>
+        </i-col>
+      </i-row>
+    </view>
+  </view>
+  <!-- 设置 -->
+  <view class="my_setting" bindtap="setting">
+    <i-row>
+      <i-col span="2">
+        <van-icon name="setting" size="18px" />
+      </i-col>
+      <i-col span="22">
+        <text>设置</text>
+      </i-col>
+    </i-row>
+  </view>
+  <!-- 衡水微联文化传媒有限公司 -->
+  <view class="footer_text">
+    <text>衡水微联文化传媒有限公司</text>
+    <wux-icon type="md-arrow-dropright" size="22" />
+  </view>
+</view>

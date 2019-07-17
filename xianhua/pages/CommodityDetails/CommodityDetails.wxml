@@ -1,0 +1,100 @@
+<view class="CommodityDetails">
+  <!-- banner -->
+  <view class="CommodityDetails_header_banner">
+    <image src="{{image}}" />
+  </view>
+  <!-- 商品信息 -->
+  <view class="CommodityDetails_header_cont">
+    <view class="CommodityDetails_contentL">
+      <view bindtap="">
+        <text>{{name}}</text>
+      </view>
+      <view bindtap="">
+        <view id="burst-12">
+          <text>促</text>
+        </view>
+        <text>￥{{promotePrice}}</text>
+      </view>
+      <view>
+        <text bindtap="">库存:</text>
+        <text bindtap="">{{gnumber}}</text>
+        <text bindtap="">销量:</text>
+        <text bindtap="">{{salenumber}}</text>
+      </view>
+    </view>
+    <!-- 分享、转发 -->
+    <view class="CommodityDetails_contentR">
+      <button open-type="share" bindtap="share">
+        <i-icon type="share_fill" size="25" color="#fce14c" />
+        <text>分享</text>
+      </button>
+    </view>
+  </view>
+  <!-- 详情评价 -->
+  <view class="Detailed-evaluation">
+    <van-tabs active="{{ active }}">
+      <van-tab title="详情">
+        <image src="../../images/goumaixuzhi.png" />
+        <text>请长按次图识别客服二维码添加微信。</text>
+        <image src="../../images/erweima.jpg" />
+      </van-tab>
+      <van-tab title="评价">
+        <view class="evaluation">
+          <van-icon name="records" size="80px" color="#969696" />
+          <text>还没有评价哦~~</text>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+  <!-- 购物车 -->
+  <view class="ShoppingCart" bindtap="ShoppingCart">
+    <van-icon name="cart-o" size="20px" color="#fff" />
+  </view>
+  <!-- 客服 -->
+  <view class="isCustomerService" wx:if="{{IsShow}}">
+    <view bindtap="phone">
+      <i-icon type="customerservice_fill" size="20" color="#969696" />
+      <text>电话</text>
+    </view>
+    <view>
+      <button open-type='contact'>
+        <i-icon type="message" size="20" color="#969696" />
+      </button>
+      <text>聊天</text>
+    </view>
+  </view>
+  <!-- 加购 -->
+  <view class="AddPurchase">
+    <i-row>
+      <i-col span="4">
+        <view class="title" bindtap="isIndex">
+          <van-icon name="wap-home" size="18px" color="#969696" />
+          <text>首页</text>
+        </view>
+      </i-col>
+      <i-col span="4">
+        <view class="title" bindtap="CustomerService">
+          <i-icon class="{{CustomerService?'CustomerService':'unCustomerService'}}" type="customerservice" size="20" />
+          <text>客服</text>
+        </view>
+      </i-col>
+      <i-col span="4">
+        <view class="title" bindtap="Collection" wx:if="{{show}}">
+          <!-- <i-icon class="{{Collection?'Collection':'unCollection'}}" type="collection" size="20" /> -->
+          <van-icon type="collection" name="star" size='18px' color='#969696' style='height:22px;line-height:70rpx;display:block;'/>
+          <text>收藏</text>
+        </view>
+        <view class="title" bindtap='uncollection' wx:else>
+          <van-icon type="collection" name="star" size='18px' color='#fce14c' style='height:22px;line-height:70rpx;display:block;'/>
+          <text>收藏</text>
+        </view>
+      </i-col>
+      <i-col span="6">
+        <span data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" catchtap="isAddPurchase">加入购物车</span>
+      </i-col>
+      <i-col span="6">
+        <span catchtap="ConfirmationOfOrders">立即购买</span>
+      </i-col>
+    </i-row>
+  </view>
+</view>

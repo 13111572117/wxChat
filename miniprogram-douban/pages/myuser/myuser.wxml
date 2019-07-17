@@ -1,0 +1,87 @@
+<!--我的.wxml-->
+<view class="">
+  <view class="header">
+    <view class="user_photo">
+    <image src="../../images/beijing.png"/>
+      <button bindtap="IsSignIn">登录</button>
+    </view>
+  </view>
+  <view class="cont_title">
+    <text>我的书影音</text>
+    <navigator>登录查看
+      <i-icon type="enter" />
+    </navigator>
+  </view>
+  <view class="Contents">
+      <i-col span="2" i-class="cont_Icon">
+        <i-icon type="live_fill" size="25" />
+      </i-col>
+    <i-row>
+      <i-col span="6" i-class="Analysis">
+        <text>观影分析</text>
+        <text>0</text>
+        <text>看过</text>
+      </i-col>
+      <i-col span="8" i-class="sign">
+        <text>标记20部影片</text>
+        <text>开启观影分析</text>
+      </i-col>
+      <i-col span="6" offset="1" i-class="open">
+        <button bindtap="IsAnalysis">立即开启</button>
+      </i-col>
+      <i-col span="1" i-class="cont_moro">
+        <i-icon type="enter" />
+      </i-col>
+    </i-row>
+  </view>
+  <!-- 分割线 -->
+  <view class="fengexian"/>
+  <view class="Contents">
+      <i-col span="2" i-class="cont_Icon">
+        <i-icon class="reading" type="createtask" size="25" />
+      </i-col>
+    <i-row>
+      <i-col span="6" i-class="Analysis">
+        <text>读书分析</text>
+        <text>0</text>
+        <text>看过</text>
+      </i-col>
+      <i-col span="8" i-class="sign">
+        <text>标记20本书</text>
+        <text>开启读书分析</text>
+      </i-col>
+      <i-col span="6" offset="1" i-class="open">
+        <button>立即开启</button>
+      </i-col>
+      <i-col span="1" i-class="cont_moro">
+        <i-icon type="enter" />
+      </i-col>
+    </i-row>
+  </view>
+  <!-- 分割线 -->
+  <view class="fengexian"/>
+  <view class="Contents">
+      <i-col span="2" i-class="cont_Icon">
+        <i-icon class="music" type="play_fill" size="25" />
+      </i-col>
+    <i-row>
+      <i-col span="6" i-class="Analysis">
+        <text>音乐分析</text>
+        <text>0</text>
+        <text>看过</text>
+      </i-col>
+      <i-col span="8" i-class="sign">
+        <text>标记10张唱片</text>
+        <text>开启音乐分析</text>
+      </i-col>
+      <i-col span="6" offset="1" i-class="open">
+        <button>立即开启</button>
+      </i-col>
+      <i-col span="1" i-class="cont_moro">
+        <i-icon type="enter" />
+      </i-col>
+    </i-row>
+  </view>
+  <!-- 分割线 -->
+  <view class="fengexian"/>
+</view>

@@ -1,0 +1,163 @@
+<!--pages/ConfirmationOfOrders/ConfirmationOfOrders.wxml-->
+<view class="ConfirmationOfOrders">
+  <!-- 商品信息 -->
+  <view class="commodityInformation">
+    <i-row>
+      <i-col span="5">
+        <image src="{{image}}" />
+      </i-col>
+      <i-col span="16">
+        <text>{{name}}</text>
+        <text>￥{{promotePrice}}</text>
+      </i-col>
+      <i-col span="3">
+        <i-icon type="close" size="16" />
+        <text> {{count}}</text>
+      </i-col>
+    </i-row>
+  </view>
+  <!-- 配送取货 -->
+  <view class="Delivery">
+    <view class='peisong' bindtap="peisong">
+      <i-row>
+        <i-col span="22">
+          <text>本店配送</text>
+        </i-col>
+        <i-col span="2">
+          <van-icon name="circle" size="20px" wx:if="{{isShow}}" />
+          <van-icon name="certificate" size="22px" color="#15f132" wx:else/>
+        </i-col>
+      </i-row>
+    </view>
+    <view class='huoqu' bindtap="quhuo">
+      <i-row>
+        <i-col span="22">
+          <text>到店取货</text>
+        </i-col>
+        <i-col span="2">
+          <van-icon name="circle" size="20px" wx:if="{{isShow2}}" />
+          <van-icon name="certificate" size="22px" color="#15f132" wx:else/>
+        </i-col>
+      </i-row>
+    </view>
+  </view>
+  <!-- 姓名、电话 -->
+  <view class='gerenxinxi' wx:if="{{isShow3}}">
+    <view class='namePhone'>
+      <text>姓名：</text>
+      <input type='text' placeholder='取货人姓名' />
+    </view>
+    <view class='namePhone'>
+      <text>电话：</text>
+      <input type='text' placeholder='取货人电话' />
+    </view>
+  </view>
+  <!-- 自提地址 -->
+  <view class='Self-addressedAddress' wx:if="{{isShow3}}">
+    <i-row class="Self-addressedAddress1">
+      <i-col span="16">
+        <text>自提地址</text>
+      </i-col>
+      <i-col span="7">
+        <text>所有自提地址</text>
+      </i-col>
+      <i-col span="1">
+        <i-icon type="enter" />
+      </i-col>
+    </i-row>
+    <i-row class="Self-addressedAddress2">
+      <i-col span="24">
+        <text>衡水一间花店</text>
+        <van-icon name="phone" color='red' />
+      </i-col>
+    </i-row>
+    <i-row class="Self-addressedAddress3">
+      <i-col span="17">
+        <text>中心街 永兴路西行30米路北一间花店</text>
+      </i-col>
+      <i-col span="6">
+        <text>111.72km</text>
+      </i-col>
+      <i-col span="1">
+        <i-icon type="enter" />
+      </i-col>
+    </i-row>
+  </view>
+  <!-- 收货地址 -->
+  <view class='orderInformation' wx:if="{{isShow2}}" bindtap=''>
+    <text>收货地址</text>
+    <i-icon type="enter" />
+  </view>
+  <!-- 订花人电话 -->
+  <view class='orderInformation'>
+    <text>订花人电话：</text>
+    <input type='text' name="iphones" bindinput='isIphone' />
+  </view>
+  <!-- 订花人电话 -->
+  <view class='orderInformation'>
+    <text>配送日期：</text>
+    <input type='text' placeholder='不可指定具体时间点' />
+  </view>
+  <!-- 订花人电话 -->
+  <view class='orderInformation'>
+    <text>卖家留言：</text>
+    <input type='text' placeholder='点击给商家留言' />
+  </view>
+  <!-- 商品价格 -->
+  <view class='orderInformation commodityPrice'>
+    <text>￥{{prices}}</text>
+    <text>商品价格：</text>
+  </view>
+  <!-- 提交订单 -->
+  <view class='placeOrder'>
+    <view class='placeOrderL'>
+      <text>实付款：</text>
+      <text>￥{{prices}}</text>
+    </view>
+    <view class='placeOrderR'>
+      <button catchtap='addOrder'>提交订单</button>
+    </view>
+  </view>
+  <!-- 确认订单支付 -->
+  <view class='zhezhao' wx:if="{{isShow4}}" catchtap='switch'/>
+  <view class='OrderPayment'wx:if="{{isShow4}}">
+    <view class='OrderPaymentor'>
+      <!-- 关闭下单窗口 -->
+      <view class='switch' catchtap='switch'>
+        <i-icon type="close" size="16" color='#fff' />
+      </view>
+      <text class='title'>订单支付</text>
+      <view class='PaymentPrice'>
+        <text>￥{{prices}}</text>
+        <text>订单总价 </text>
+        <text> (包含运费 ￥ {{promotePrices}})</text>
+      </view>
+      <!-- 订单信息 -->
+      <view class='isorderInformation'>
+        <text>订单信息</text>
+        <text>订单编号：{{orderNumber}}</text>
+        <view style='width: 100%;border-bottom: 2rpx solid #f0f0f0;background-color:#fff;float:left'>
+          <text style='border:0;color:#333;background-color:#fff;float:left;width:33%;margin-top:0;'>联系电话：</text>
+          <input style='width:55%;margin-top:10rpx' type='text' placeholder='{{iphone}}' />
+        </view>
+        <text>下单时间：{{time}}</text>
+      </view>
+      <!-- 支付方式 -->
+      <view class='PaymentMode'>
+        <text class='PaymentModeTitle'>支付方式</text>
+        <i-row>
+          <i-col span="2">
+            <van-icon name="wechat" size="18px" color="#15f132" />
+          </i-col>
+          <i-col span="20">
+            <text>微信支付</text>
+          </i-col>
+          <i-col span="2">
+            <van-icon name="checked" size="18px" color="#15f132" />
+          </i-col>
+        </i-row>
+        <button catchtap='ConfirmTheOrder' data-image='{{image}}' data-name='{{name}}' data-price='{{promotePrice}}' data-ordernumber='{{orderNumber}}'>确认下单</button>
+      </view>
+    </view>
+  </view>
+</view>

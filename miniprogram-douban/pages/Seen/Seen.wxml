@@ -1,0 +1,7 @@
+<!-- 看过 -->
+<view class="Seen">
+<text>点击星星评分</text>
+<i-rate cout="{{5}}" bind:change="DScore" size="30" value="{{LScore}}"/>
+  <textarea placeholder="写几句评价吧..."></textarea>
+  <button>确定</button>
+</view>

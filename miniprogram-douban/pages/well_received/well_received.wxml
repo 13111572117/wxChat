@@ -1,0 +1,163 @@
+<!-- 畅销图书 -->
+<view class="details">
+  <!-- 图片海报 -->
+  <view class="details_img">
+    <image src="{{list.images.large}}"></image>
+  </view>
+  <!-- 电影名称 -->
+  <view class="details_comlit">
+    <text>{{list.title}}</text>
+    <!-- <text>{{list.original_title}}({{list.year}})</text> -->
+    <text>{{list.author}} / {{list.publisher}} / 出版时间{{list.pubdate}}</text>
+    <view class="looking">
+      <button bindtap="want_to_see">
+        <i-icon type="like" size="15" color="#f5ac3f" /> 想读</button>
+      <button bindtap="seen">
+        <i-icon type="browse" size="15" color="#f5ac3f" /> 在读</button>
+      <button bindtap="seen">
+        <i-icon type="collection" size="15" color="#f5ac3f" /> 读过</button>
+    </view>
+  </view>
+</view>
+<!-- 豆瓣评分 -->
+<view class="douban_score">
+  <view class="score_title">
+    <text>豆瓣评分</text>
+    <text>TM</text>
+    <i-icon type="enter" />
+  </view>
+  <!-- 图形评分 -->
+  <view class="Graphical_score">
+    <view class="Graphical_score_L">
+      <text class="Graphical_score_N">{{list.rating.average}}</text>
+      <i-rate class="Graphical_score_I" size="10" value="{{list.rating.average/2}}" />
+    </view>
+    <view class="Graphical_score_C">
+      <i-rate class="Graphical_score_I" count="{{5}}" size="6" />
+      <i-rate class="Graphical_score_I" count="{{4}}" size="6" />
+      <i-rate class="Graphical_score_I" count="{{3}}" size="6" />
+      <i-rate class="Graphical_score_I" count="{{2}}" size="6" />
+      <i-rate class="Graphical_score_I" count="{{1}}" size="6" />
+    </view>
+    <view class="Graphical_score_R">
+      <i-rate class="Graphical_score_I" count="{{5}}" size="15" value="{{list.rating.average/2}}" />
+      <text>{{list.numRaters}}人评分</text>
+    </view>
+  </view>
+</view>
+<!-- 简介 -->
+<view class="brief_introduction">
+  <text class="brief_introduction_title">简介</text>
+  <text class="brief_introduction_cont {{ellipsis?'ellipsis':'unellipsis'}}">{{list.summary}}</text>
+  <span bindtap="toggle">{{ellipsis?'展开':'收起'}}</span>
+</view>
+<!-- 影人 -->
+<!-- <view class="brief_introduction">
+  <text class="brief_introduction_title">影人</text>
+  <scroll-view scroll-x="true">
+    <view class="uploadWrap" scroll-x="true">
+      <view class="upload_Item" wx:for="{{director}}">
+        <image class="upload_Item_img" src="{{item.avatars.large}}"></image>
+        <text>{{item.name}}</text>
+        <text>导演</text>
+      </view>
+      <view class="upload_Item" style="float:left" wx:for="{{performer}}">
+        <image class="upload_Item_img" src="{{item.avatars.large}}"></image>
+        <text>{{item.name}}</text>
+        <text>演员</text>
+      </view>
+    </view>
+  </scroll-view>
+</view> -->
+<!-- 预告片/剧照 -->
+<!-- <view class="brief_introduction">
+  <text class="brief_introduction_title3">预告片/剧照</text>
+  <text class="brief_introduction_title_all">全部 537</text>
+  <scroll-view scroll-x="true">
+    <view class="uploadWrap" scroll-x="true">
+      <view class="upload_video">
+        <video src="{{list.trailers.resource_url}}" />
+      </view>
+      <view class="upload_Item3" wx:for="{{stills}}">
+        <image mode="aspectFill" class="upload_Item_img3" src="{{item.image}}" />
+      </view>
+    </view>
+  </scroll-view>
+</view> -->
+<!-- 短评 -->
+<view class="brief_introduction cont4">
+  <view class="Short_commentary_title">
+    <text class="brief_introduction_title3">短评</text>
+    <text class="brief_introduction_title_all">全部 280863</text>
+  </view>
+  <view class="Short_commentary_name" wx:for="{{shortCommentary}}" wx:if="{{index<4}}">
+    <view class="Short_commentary_img">
+      <image src="{{item.author.avatar}}" />
+    </view>
+    <view class="Short_commentary_nameT">
+      <text>{{item.author.name}}</text>
+      <i-rate size="12" bind:change="" value="{{item.rating.value}}">
+      </i-rate>
+      <text>{{item.published}}</text>
+    </view>
+    <view class="Short_commentary_cont">
+      <text>{{item.summary}}</text>
+      <view class="thumbs-up">
+        <i-icon type="praise" size="15" />
+        <text>{{item.votes}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="looking_more" bindtap="all_comments">
+    <text>查看全部短评</text>
+    <i-icon type="enter" size="12" />
+  </view>
+</view>
+<!-- 喜欢这部电影的人也喜欢 -->
+<view class="brief_introduction">
+  <text class="brief_introduction_title">喜欢这本书的人也喜欢</text>
+  <scroll-view scroll-x="true">
+    <view class="uploadWrap" scroll-x="true">
+      <view class="upload_Item" wx:for="{{isBooks}}" wx:if="{{index>2}}">
+        <!-- navigator：页面跳转链接 -->
+        <view bindtap="details" data-newsid="{{item.id}}">
+          <image class="upload_Item_img" src="{{item.images.large}}"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <i-cell>
+          <i-rate bind:change="" disabled="{{true}}" value="{{item.rating.average/2}}" size="10">
+          </i-rate>
+          <text>{{item.rating.average}}</text>
+        </i-cell>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 长书评 -->
+<view class="brief_introduction cont4 long_commentary">
+  <view class="Short_commentary_title">
+    <text class="brief_introduction_title3">书评</text>
+    <text class="brief_introduction_title_all">全部 280863</text>
+  </view>
+  <view class="Short_commentary_name" wx:for="{{longCommentary}}">
+    <view class="Short_commentary_img">
+      <image src="{{item.author.avatar}}" />
+    </view>
+    <view class="Short_commentary_nameT">
+      <text>{{item.author.name}}看过</text>
+      <i-rate size="12" bind:change="" value="{{item.rating.value}}">
+      </i-rate>
+      <!-- <text>{{item.created_at}}</text> -->
+    </view>
+    <view class="Short_commentary_cont">
+      <title>{{item.title}}</title>
+      <text>{{item.summary}}</text>
+      <view class="thumbs-up">
+        <!-- <i-icon type="praise" size="15" /> -->
+        <text>{{item.votes}} 回复 · {{item.useless}} 有用 · {{item.comments}} 转发</text>
+      </view>
+    </view>
+    <view class="dengexian" />
+  </view>
+</view>

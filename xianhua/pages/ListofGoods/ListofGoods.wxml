@@ -1,0 +1,110 @@
+<!-- 商品列表页 -->
+<view class="ListofGoods">
+  <!-- 顶部状态栏 -->
+  <view class="header_column">
+    <i-row>
+      <i-col span="6">
+        <view bindtap="toggle" class="{{ellipsis?'ellipsis':'unellipsis'}}">
+          <text>综合</text>
+          <view class="arrow-dropdown">
+            <wux-icon type="md-arrow-dropdown" size="18" />
+          </view>
+        </view>
+      </i-col>
+      <i-col span="6">
+        <view bindtap="toggle2" class="{{ellipsis2?'ellipsis2':'unellipsis2'}}">
+          <text>销量</text>
+          <view class="arrow-dropdown">
+            <wux-icon type="md-arrow-dropdown" size="18" />
+          </view>
+        </view>
+      </i-col>
+      <i-col span="6">
+        <view bindtap="toggle3" class="{{ellipsis3?'ellipsis3':'unellipsis3'}}">
+          <text>价格</text>
+          <view class="arrow-dropdown">
+            <wux-icon class="arrow-dropup {{ellipsis4?'ellipsis4':'unellipsis4'}}" type="md-arrow-dropup" size="18" />
+            <wux-icon class="{{ellipsis5?'ellipsis5':'unellipsis5'}}" type="md-arrow-dropdown" size="18" />
+          </view>
+        </view>
+      </i-col>
+      <!-- 改变页面布局格式 -->
+      <i-col span="6" bindtap="changeStyle">
+        <view>
+          <view class="apps-o" wx:if="{{isShow}}">
+            <i-icon type="other" size="25" color="red" />
+          </view>
+          <view class="apps-o" wx:else>
+            <van-icon name="apps-o" size="18px" color="red" />
+          </view>
+          <view class="arrow-dropdown">
+            <wux-icon type="md-arrow-dropdown" size="18" />
+          </view>
+        </view>
+      </i-col>
+    </i-row>
+  </view>
+  <!-- content -->
+  <view class="ListofGoods_cont {{layout?'layout':'layout2'}}">
+    <scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+      <view class="res" wx:for="{{res}}" wx:key="{{item.id}}">
+        <view class="ListofGoods_cont_img" catchtap="CommodityDetails" data-image="{{item.g_img}}" data-name="{{item.g_name}}" 
+        data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}">
+          <image src="{{item.g_img}}" />
+        </view>
+        <view class="ListofGoods_content" catchtap="CommodityDetails" data-image="{{item.g_img}}" data-name="{{item.g_name}}" 
+        data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}">
+          <view>
+            <text>{{item.g_name}}</text>
+          </view>
+          <view>
+            <view id="burst-12">
+              <text>促</text>
+            </view>
+            <text>￥{{item.promote_price}}</text>
+            <text>{{item.shop_price}}</text>
+          </view>
+          <view>
+            <text>销量:</text>
+            <text>{{item.sale_number}}</text>
+            <i-icon type="publishgoods_fill" size="25" catchtap="jiagou" data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" data-g_number="{{item.g_number}}" data-sale_number="{{item.sale_number}}" />
+          </view>
+        </view>
+        <!-- 加入购物车 -->
+        <view class="zhezhao" bindtap="zhezhao" wx:if="{{iszhezhao}}" />
+        <view class="Addtocart" wx:if="{{isJiagou}}">
+          <span class="back" bindtap="unisJiagou">
+            <van-icon name="cross" />
+          </span>
+          <view class="ListofGoods_cont_img1">
+            <image src="{{modelimage}}" />
+          </view>
+          <view class="ListofGoods_content1">
+            <view>
+              <text>{{modelname}}</text>
+            </view>
+            <view>
+              <text>￥{{modelpromoteprice}}</text>
+            </view>
+            <view>
+              <text>库存:</text>
+              <text>{{modelGNumber}}</text>
+              <text>销量:</text>
+              <text>{{modelSaleNumber}}</text>
+            </view>
+          </view>
+          <view class="PurchaseQuantity">
+            <text>购买数量</text>
+            <view class="Counter">
+              <van-stepper value="{{ 1 }}" bind:change="onChange" />
+            </view>
+          </view>
+          <view class="purchases">
+            <span data-g_img="{{item.g_img}}" data-g_name="{{item.g_name}}" data-promote_price="{{item.promote_price}}" catchtap="isAddPurchase">加入购物车</span>
+            <span>立即购买</span>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
